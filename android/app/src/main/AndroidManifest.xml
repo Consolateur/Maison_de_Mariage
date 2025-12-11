@@ -2,14 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.maison_de_mariage">
 
-    <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:label="Maison de Mariage"
         android:icon="@mipmap/ic_launcher">
 
-        <!-- REMOVE old startup provider (required for Flutter 3.19+) -->
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.startup"
@@ -19,12 +17,11 @@
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
     </application>
 </manifest>
